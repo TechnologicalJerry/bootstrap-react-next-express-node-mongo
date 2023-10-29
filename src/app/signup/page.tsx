@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
@@ -21,18 +21,24 @@ export default function SignupPage() {
             const response = await axios.post("/api/users/signup", user);
             console.log("Signup success", response.data);
             router.push("/login");
-            
-        } catch (error:any) {
+
+        } catch (error: any) {
             console.log("Signup failed", error.message);
-            
+
             toast.error(error.message);
-        }finally {
+        } finally {
             setLoading(false);
         }
     }
 
-   
+    useEffect(() => {
+        if (user.email.length > 0 && user.password.length > 0 && user.username.length > 0) {
+            setButtonDisabled(false);
+        } else {
+            setButtonDisabled(true);
+        }
+    }, [user]);
 
 
-   
+
 }
