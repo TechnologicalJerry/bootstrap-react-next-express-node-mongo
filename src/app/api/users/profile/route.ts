@@ -5,6 +5,8 @@ import User from "@/models/userModel";
 
 connect();
 
-export async function GET(){
+export async function GET(request:NextRequest){
+
+
 
 }
