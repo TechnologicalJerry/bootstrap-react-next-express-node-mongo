@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/TechnologicalJerry/bootstrap-react-next-express-node-mongo/issues"
   },
-  "homepage": "https://github.com/TechnologicalJerry/angular-express-node-mongo#readme",
+  "homepage": "https://github.com/TechnologicalJerry/bootstrap-react-next-express-node-mongo#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "config": "^3.3.9",
