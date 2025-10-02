@@ -40,6 +40,12 @@ src/
 │   ├── product.model.ts
 │   ├── session.model.ts
 │   └── user.model.ts
+├── routers/             # Route definitions (organized by feature)
+│   ├── index.router.ts  # Main router that combines all routes
+│   ├── auth.router.ts   # Authentication routes
+│   ├── user.router.ts   # User management routes
+│   ├── product.router.ts # Product management routes
+│   └── session.router.ts # Session management routes
 ├── schema/              # Zod validation schemas
 │   ├── product.schema.ts
 │   ├── session.schems.ts
@@ -48,7 +54,7 @@ src/
 │   ├── connectDb.ts
 │   ├── logger.ts
 │   └── swagger.ts
-├── routes.ts            # Route definitions
+├── routes.ts            # Main route configuration
 └── server.ts           # Server entry point
 ```
 
@@ -106,6 +112,11 @@ src/
 - `GET /api/v1/products/:productId` - Get product by ID
 - `PUT /api/v1/products/:productId` - Update product
 - `DELETE /api/v1/products/:productId` - Delete product
+
+### Sessions
+- `GET /api/v1/sessions` - Get user sessions
+- `DELETE /api/v1/sessions/:sessionId` - Delete specific session
+- `DELETE /api/v1/sessions` - Delete all user sessions (except current)
 
 ## API Documentation
 
@@ -276,3 +287,4 @@ curl "http://localhost:5050/api/v1/products?category=electronics&minPrice=100&ma
 ## License
 
 This project is licensed under the ISC License.
+
