@@ -119,3 +119,4 @@ export type CreateProductInput = TypeOf<typeof createProductSchema>;
 export type UpdateProductInput = TypeOf<typeof updateProductSchema>;
 export type ProductParamsInput = TypeOf<typeof productParamsSchema>;
 export type ProductQueryInput = TypeOf<typeof productQuerySchema>;
+
