@@ -321,3 +321,4 @@ router.put("/:productId", authenticateToken, validate(updateProductSchema), vali
 router.delete("/:productId", authenticateToken, validate(productParamsSchema), asyncHandler(deleteProductHandler));
 
 export default router;
+
