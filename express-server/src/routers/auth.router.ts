@@ -193,3 +193,4 @@ router.post("/refresh", asyncHandler(refreshTokenHandler));
 router.post("/change-password", authenticateToken, validate(changePasswordSchema), asyncHandler(changePasswordHandler));
 
 export default router;
+
