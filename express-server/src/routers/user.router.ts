@@ -185,3 +185,4 @@ router.put("/:userId", authenticateToken, validate(updateUserSchema), validate(u
 router.delete("/:userId", authenticateToken, requireAdmin, validate(userParamsSchema), asyncHandler(deleteUserHandler));
 
 export default router;
+
