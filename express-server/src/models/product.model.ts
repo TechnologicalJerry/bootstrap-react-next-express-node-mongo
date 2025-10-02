@@ -96,3 +96,4 @@ productSchema.index({ createdBy: 1 });
 const ProductModel = mongoose.model<ProductDocument>("Product", productSchema);
 
 export default ProductModel;
+
