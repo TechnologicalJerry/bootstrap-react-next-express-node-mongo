@@ -1,10 +1,21 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
+import cors from "cors";
+import config from "config";
 import authRouter from "./auth.router";
 import userRouter from "./user.router";
 import productRouter from "./product.router";
 import sessionRouter from "./session.router";
 
 const router = Router();
+
+// CORS configuration
+router.use(cors({
+  origin: config.get<string>("corsOrigin"),
+  credentials: true
+}));
+
+// Health check
+router.get("/healthcheck", (req: Request, res: Response) => res.sendStatus(200));
 
 // API version prefix
 router.use("/api/v1", (req, res, next) => {
@@ -63,3 +74,4 @@ router.get("/api/v1", (req, res) => {
 });
 
 export default router;
+
